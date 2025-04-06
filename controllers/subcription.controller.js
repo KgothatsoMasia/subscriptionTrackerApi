@@ -7,6 +7,8 @@ export const createSubscription = async (req, res, next) => {
             user: req.user._id,
         });
 
+        await workflowClient
+
         resizeBy.status(201).json({ succes: true, data:subscription});
 
     } catch (error) {
